@@ -1,0 +1,13 @@
+service: predicate-builder-server
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+functions:
+  getBuilderContent:
+    handler: handler.getBuilderContent
+    events:
+      - http:
+          path: builder-content
+          method: get

@@ -1,0 +1,12 @@
+{
+  "name": "predicate-builder-server",
+  "version": "1.0.0",
+  "description": "lambda functions for predicate builder server",
+  "main": "handler.js",
+  "repository": "https://github.com/n8harris/magical-predicate-builder",
+  "author": "Nathan Harris",
+  "license": "MIT",
+  "dependencies": {
+    "firebase": "^5.5.8"
+  }
+}
