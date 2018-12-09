@@ -1,30 +1,38 @@
 'use strict';
 
-import Firebase from './utils/Firebase';
-import { BUILDER_CONTENT_TYPES } from './shared/constants';
-import BuilderContentFormatter from './utils/BuilderContentFormatter';
+var _Firebase = require('./utils/Firebase');
 
-module.exports.getBuilderContent = async (event, context, callback) => {
-  const collections = [ BUILDER_CONTENT_TYPES.PREDICATES, BUILDER_CONTENT_TYPES.OPERATORS];
-  Firebase.getCollections(collections).then((values) => {
-    let content = {};
-    values.forEach((collection, index) => {
-      content[collections[index]] = BuilderContentFormatter(collection, collections[index]);
-    })
+var _Firebase2 = _interopRequireDefault(_Firebase);
+
+var _constants = require('./shared/constants');
+
+var _BuilderContentFormatter = require('./utils/BuilderContentFormatter');
+
+var _BuilderContentFormatter2 = _interopRequireDefault(_BuilderContentFormatter);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+module.exports.getBuilderContent = async function (event, context, callback) {
+  var collections = [_constants.BUILDER_CONTENT_TYPES.PREDICATES, _constants.BUILDER_CONTENT_TYPES.OPERATORS];
+  _Firebase2.default.getCollections(collections).then(function (values) {
+    var content = {};
+    values.forEach(function (collection, index) {
+      content[collections[index]] = (0, _BuilderContentFormatter2.default)(collection, collections[index]);
+    });
     callback(null, {
       statusCode: 200,
       body: JSON.stringify({
         message: content,
-        input: event,
-      }),
+        input: event
+      })
     });
-  }).catch(() => {
+  }).catch(function () {
     callback(null, {
       statusCode: 500,
       body: JSON.stringify({
         message: "Sorry! The unicorns are out to play and can't create the app right now",
-        input: event,
-      }),
+        input: event
+      })
     });
   });
 };

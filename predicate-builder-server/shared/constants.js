@@ -1,8 +1,11 @@
-const BUILDER_CONTENT_TYPES = {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var BUILDER_CONTENT_TYPES = {
   PREDICATES: 'predicates',
-  OPERATORS: 'operators',
+  OPERATORS: 'operators'
 };
 
-export {
-  BUILDER_CONTENT_TYPES,
-};
+exports.BUILDER_CONTENT_TYPES = BUILDER_CONTENT_TYPES;
