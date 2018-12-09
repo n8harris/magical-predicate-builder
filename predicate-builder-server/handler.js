@@ -36,3 +36,28 @@ module.exports.getBuilderContent = async function (event, context, callback) {
     });
   });
 };
+
+module.exports.getBuilderQuery = async function (event, context, callback) {
+  var collections = [_constants.BUILDER_CONTENT_TYPES.PREDICATES, _constants.BUILDER_CONTENT_TYPES.OPERATORS];
+  _Firebase2.default.getCollections(collections).then(function (values) {
+    var content = {};
+    values.forEach(function (collection, index) {
+      content[collections[index]] = (0, _BuilderContentFormatter2.default)(collection, collections[index]);
+    });
+    callback(null, {
+      statusCode: 200,
+      body: JSON.stringify({
+        message: content,
+        input: event
+      })
+    });
+  }).catch(function () {
+    callback(null, {
+      statusCode: 500,
+      body: JSON.stringify({
+        message: "Sorry! The unicorns are out to play and can't create the app right now",
+        input: event
+      })
+    });
+  });
+};

@@ -11,3 +11,9 @@ functions:
       - http:
           path: builder-content
           method: get
+  getBuilderQuery:
+    handler: handler.getBuilderQuery
+    events:
+      - http:
+          path: builder-query/{filters}
+          method: get
