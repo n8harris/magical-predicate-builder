@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/magical-predicate-builder/static/js/runtime~main.68d50c1c.js"
   },
   {
-    "revision": "e75c4e802271372ecd21",
-    "url": "/magical-predicate-builder/static/js/main.e75c4e80.chunk.js"
+    "revision": "8eb8ae87006a27a69c62",
+    "url": "/magical-predicate-builder/static/js/main.8eb8ae87.chunk.js"
   },
   {
-    "revision": "c60ad0b95f0b7a871a14",
-    "url": "/magical-predicate-builder/static/js/1.c60ad0b9.chunk.js"
+    "revision": "28d43249de655080ceff",
+    "url": "/magical-predicate-builder/static/js/1.28d43249.chunk.js"
   },
   {
-    "revision": "e75c4e802271372ecd21",
+    "revision": "8eb8ae87006a27a69c62",
     "url": "/magical-predicate-builder/static/css/main.a5e938ca.chunk.css"
   },
   {
-    "revision": "903ebfa3737a60f663ad65d8761c973e",
+    "revision": "d9d5d481ea7f366d057b5f07ebcc4092",
     "url": "/magical-predicate-builder/index.html"
   }
 ];

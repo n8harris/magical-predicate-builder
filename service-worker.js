@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/magical-predicate-builder/precache-manifest.90931664477bf3a151d594e474e3e13b.js"
+  "/magical-predicate-builder/precache-manifest.76d6f6edc212330ca59a481317b9239f.js"
 );
 
 workbox.clientsClaim();
