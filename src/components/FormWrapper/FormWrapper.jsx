@@ -6,6 +6,7 @@ import {
 import SelectField from '../SelectField';
 import TextField from '../TextField';
 import MultiValueField from '../MultiValueField';
+import TrashButton from '../TrashButton';
 
 const FormWrapper = (props) => {
   return (
@@ -18,6 +19,7 @@ const FormWrapper = (props) => {
         :
         <TextField name='value' onChange={props.onChange} disabled={props.disabled} />
       }
+      <TrashButton onClick={props.removeFilter} disabled={props.disabled} />
     </StyledFormWrapper>
   );
 }
@@ -55,6 +57,10 @@ FormWrapper.propTypes = {
    * disabled state of form
    */
   disabled: bool,
+  /**
+   * function for removing a filter
+   */
+  removeFilter: func.isRequired,
 };
 
 FormWrapper.defaultProps = {

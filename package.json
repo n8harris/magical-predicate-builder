@@ -1,5 +1,6 @@
 {
   "name": "magical-predicate-builder",
+  "homepage": "http://n8harris.github.io/magical-predicate-builder",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,6 +12,8 @@
     "styled-components": "^4.1.2"
   },
   "devDependencies": {
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
     "gh-pages": "latest",
     "webpack-bundle-analyzer": "latest"
   },

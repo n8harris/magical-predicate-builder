@@ -1,12 +1,23 @@
 {
   "name": "predicate-builder-server",
   "version": "1.0.0",
-  "description": "lambda functions for predicate builder server",
-  "main": "handler.js",
+  "description": "predicate builder server",
+  "main": "index.js",
   "repository": "https://github.com/n8harris/magical-predicate-builder",
   "author": "Nathan Harris",
   "license": "MIT",
+  "scripts": {
+    "build": "rm -rf lib/ && babel ./src --out-dir lib/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "start": "npm run build && node lib/index.js"
+  },
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
     "firebase": "^5.5.8"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
   }
 }
